@@ -6,7 +6,7 @@ class Author:
 
     def __init__(self, name):
         if not isinstance(name, str) or len(name) == 0:
-            raise Exception("Name must be a non-empty string")
+            raise Exception
         self._name = name
         Author._all.append(self)
 
@@ -16,7 +16,7 @@ class Author:
 
     @name.setter
     def name(self, value):
-        raise AttributeError("Name is immutable")
+        raise AttributeError
 
     def articles(self):
         from article import Article

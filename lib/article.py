@@ -6,11 +6,11 @@ class Article:
 
     def __init__(self, author, magazine, title):
         if not isinstance(author, Author):
-            raise Exception("Author must be of type Author")
+            raise Exception
         if not isinstance(magazine, Magazine):
-            raise Exception("Magazine must be of type Magazine")
+            raise Exception
         if not isinstance(title, str) or not (5 <= len(title) <= 50):
-            raise Exception("Title must be a string between 5 and 50 characters")
+            raise Exception
         self._author = author
         self._magazine = magazine
         self._title = title
@@ -22,7 +22,7 @@ class Article:
 
     @title.setter
     def title(self, value):
-        raise AttributeError("Title is immutable")
+        raise AttributeError
 
     @property
     def author(self):
@@ -31,7 +31,7 @@ class Article:
     @author.setter
     def author(self, value):
         if not isinstance(value, Author):
-            raise Exception("Author must be of type Author")
+            raise Exception
         self._author = value
 
     @property
@@ -41,5 +41,5 @@ class Article:
     @magazine.setter
     def magazine(self, value):
         if not isinstance(value, Magazine):
-            raise Exception("Magazine must be of type Magazine")
+            raise Exception
         self._magazine = value
